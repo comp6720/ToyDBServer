@@ -2,6 +2,7 @@
 using System.IO;
 using DatabaseServer;
 using ServerConnect;
+using Parser;
 
 namespace ToyDBServer
 {
@@ -10,6 +11,9 @@ namespace ToyDBServer
         //Create server object
         static Server server = new Server();
 
+        //Create parser object
+        static SQLParser parser = new SQLParser();
+
         //Create database object
         static Database database = new Database();
 
@@ -17,7 +21,9 @@ namespace ToyDBServer
         {
             server.ExecuteServer();
 
-            setup();
+            SetDatabaseFolder();
+
+            AwaitQuery();
         }
 
         /**
@@ -26,16 +32,29 @@ namespace ToyDBServer
          *
          * @return void
         **/
-        private static void setup()
+        private static void SetDatabaseFolder()
         {
             Console.Write("Enter the location where the database is to be created: ");
             database.Location = Console.ReadLine();
+        }
 
-            createDatabase();
 
-            useDatabase();
+        /**
+         * Listens for incoming queries from the client
+         *
+         * @return void
+        **/
+        private static void AwaitQuery()
+        {
+            while (true)
+            {
+                Console.WriteLine("\nAwaiting query ... ");
 
-            createTable();
+                // Suspend while waiting for incoming connection Using Accept()
+                server.ClientSocket = server.Listener.Accept();
+
+                server.ReceiveQuery();
+            }
         }
 
 
@@ -45,7 +64,7 @@ namespace ToyDBServer
          *
          * @return void
         **/
-        private static void createDatabase()
+        private static void CreateDatabase()
         {
             //Get the inputted database name
             Console.Write("\nEnter the name of the database to create: ");
@@ -57,7 +76,7 @@ namespace ToyDBServer
             //Run again if there is an error that the database folder already exists
             if(database.databaseAlreadyExists == true)
             {
-                setup();
+                SetDatabaseFolder();
             }
         }
 
@@ -67,7 +86,7 @@ namespace ToyDBServer
          *
          * @return void
         **/
-        private static void useDatabase()
+        private static void UseDatabase()
         {
             //Get the inputted database name
             Console.Write("\nEnter the name of the database to use: ");
@@ -83,7 +102,7 @@ namespace ToyDBServer
          *
          * @return void
         **/
-        private static void createTable()
+        private static void CreateTable()
         {
             //Create the table object
             Table table = new Table();
@@ -135,7 +154,7 @@ namespace ToyDBServer
          *
          * @return void
         **/
-        public static void parseQuery(string query)
+        public static void ParseQuery(string query)
         {
 
         }

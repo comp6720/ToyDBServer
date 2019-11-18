@@ -10,14 +10,21 @@ namespace ToyDBServer
     {// this class implements an Index Using a Hash table Data structure
 
         private Hashtable IndexTable = new Hashtable();
-        private DatabaseServer.TableColumn column;
+        private String columnName;
         private String tableName;
     
-        public Index(String tableName, DatabaseServer.TableColumn column) {
-            this.column = column; // Column on which the index will be implemented
+        public Index(String tableName, String column) {
+            this.columnName = column; // Column on which the index will be implemented
             this.tableName = tableName;   // table in which colunm is located
 
             // retrieve record and use column to update table 
+            /*
+             for (int i; i<= number of Records; i++){
+               Re
+               this.IndexList.Add(columnEntry, RecorfLocation) 
+            
+            }
+             */
 
         }
 

@@ -1,18 +1,19 @@
-﻿using DatabaseServer;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using DatabaseServer;
+using DatabaseTable;
 
 namespace ToyDBServer
 {    
     class Index
     {
         private Hashtable IndexTable = new Hashtable();
-        private DatabaseServer.TableColumn column;
+        private TableColumn column;
         private String tableName;
     
-        public Index(String tableName, DatabaseServer.TableColumn column) {
+        public Index(String tableName, TableColumn column) {
             this.column = column; // Column on which the index will be implemented
             this.tableName = tableName;   // table in which colunm is located
 

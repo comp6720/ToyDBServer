@@ -2,6 +2,7 @@ using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using Parser;
 
 namespace ServerConnect
 {
@@ -97,6 +98,9 @@ namespace ServerConnect
 
                 //Output message from client in the console
                 Console.WriteLine("Query received -> {0} ", data);
+
+                //Parse the query
+                SQLParser.SQLRouteCommand(data);
             }
 
             // Management of Socket's Exceptions 

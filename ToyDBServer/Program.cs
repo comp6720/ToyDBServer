@@ -1,21 +1,15 @@
 ﻿using System;
 using System.IO;
 using DatabaseServer;
+using DatabaseTable;
 using ServerConnect;
-using Parser;
 
 namespace ToyDBServer
 {
     class Program
     {
-        //Create server object
+        //Create server socket object
         static Server server = new Server();
-
-        //Create parser object
-        static SQLParser parser = new SQLParser();
-
-        //Create database object
-        static Database database = new Database();
 
         static void Main(string[] args)
         {
@@ -35,26 +29,7 @@ namespace ToyDBServer
         private static void SetDatabaseFolder()
         {
             Console.Write("Enter the location where the database is to be created: ");
-            database.Location = Console.ReadLine();
-        }
-
-
-        /**
-         * Listens for incoming queries from the client
-         *
-         * @return void
-        **/
-        private static void AwaitQuery()
-        {
-            while (true)
-            {
-                Console.WriteLine("\nAwaiting query ... ");
-
-                // Suspend while waiting for incoming connection Using Accept()
-                server.ClientSocket = server.Listener.Accept();
-
-                server.ReceiveQuery();
-            }
+            Database.Instance.Location = Console.ReadLine();
         }
 
 
@@ -68,17 +43,18 @@ namespace ToyDBServer
         {
             //Get the inputted database name
             Console.Write("\nEnter the name of the database to create: ");
-            database.DatabaseName = Console.ReadLine();
+            Database.Instance.DatabaseName = Console.ReadLine();
 
             //Call the create database method
-            database.create(database.DatabaseName);
+            Database.Instance.CreateDatabase(Database.Instance.DatabaseName);
             
             //Run again if there is an error that the database folder already exists
-            if(database.databaseAlreadyExists == true)
+            if(Database.Instance.databaseAlreadyExists == true)
             {
                 SetDatabaseFolder();
             }
         }
+
 
         /**
          * Selects the database to use.
@@ -93,8 +69,9 @@ namespace ToyDBServer
             string currentDatabase = Console.ReadLine();
 
             //Call the use database method
-            database.use(database.DatabaseName);
+            Database.Instance.UseDatabase(Database.Instance.DatabaseName);
         }
+
 
         /**
          * Creates a new table in the current database.
@@ -131,7 +108,7 @@ namespace ToyDBServer
                 //Add the columns to the table
                 if (table.columnCount < table.maxColumnCount)
                 {
-                    column[i].add(table.TableName, column[i].ColumnName, column[i].ColumnType);
+                    column[i].AddColumn(table.TableName, column[i].ColumnName, column[i].ColumnType);
 
                     //Increment the column count
                     table.columnCount += 1;
@@ -144,19 +121,25 @@ namespace ToyDBServer
             }
 
             //Call the create table method
-            table.create(table.TableName, column[1], column[2], column[3]);
+            table.CreateTable(table.TableName, column[1], column[2], column[3]);
         }
 
 
         /**
-         * Parses the text of the inputted query
-         * @param string query - the query to be parsed and executed
+         * Listens for incoming queries from the client
          *
          * @return void
         **/
-        public static void ParseQuery(string query)
+        private static void AwaitQuery()
         {
+            while (true)
+            {
+                Console.WriteLine("\nAwaiting query ... ");
 
+                // Suspend while waiting for incoming connection Using Accept()
+                server.ClientSocket = server.Listener.Accept();
+                server.ReceiveQuery();
+            }
         }
     }
 }

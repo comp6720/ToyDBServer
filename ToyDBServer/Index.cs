@@ -7,7 +7,8 @@ using System.Text;
 namespace ToyDBServer
 {    
     class Index
-    {
+    {// this class implements an Index Using a Hash table Data structure
+
         private Hashtable IndexTable = new Hashtable();
         private DatabaseServer.TableColumn column;
         private String tableName;

@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Akeem\\.nuget\\packages\\": {}
+    "C:\\Users\\physics_labtech\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Akeem\\source\\repos\\ToyDBServer\\ToyDBServer\\ToyDBServer.csproj",
+      "projectUniqueName": "C:\\Users\\physics_labtech\\Source\\Repos\\ToyDBServer\\ToyDBServer\\ToyDBServer.csproj",
       "projectName": "ToyDBServer",
-      "projectPath": "C:\\Users\\Akeem\\source\\repos\\ToyDBServer\\ToyDBServer\\ToyDBServer.csproj",
-      "packagesPath": "C:\\Users\\Akeem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Akeem\\source\\repos\\ToyDBServer\\ToyDBServer\\obj\\",
+      "projectPath": "C:\\Users\\physics_labtech\\Source\\Repos\\ToyDBServer\\ToyDBServer\\ToyDBServer.csproj",
+      "packagesPath": "C:\\Users\\physics_labtech\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\physics_labtech\\Source\\Repos\\ToyDBServer\\ToyDBServer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Akeem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\physics_labtech\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

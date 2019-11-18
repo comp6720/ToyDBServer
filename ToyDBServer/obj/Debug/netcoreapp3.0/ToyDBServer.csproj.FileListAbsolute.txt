@@ -9,3 +9,14 @@ C:\Users\Akeem\source\repos\ToyDBServer\ToyDBServer\obj\Debug\netcoreapp3.0\ToyD
 C:\Users\Akeem\source\repos\ToyDBServer\ToyDBServer\obj\Debug\netcoreapp3.0\ToyDBServer.dll
 C:\Users\Akeem\source\repos\ToyDBServer\ToyDBServer\obj\Debug\netcoreapp3.0\ToyDBServer.pdb
 C:\Users\Akeem\source\repos\ToyDBServer\ToyDBServer\obj\Debug\netcoreapp3.0\ToyDBServer.csprojAssemblyReference.cache
+C:\Users\Akeem\Source\Repos\comp6720\ToyDBServer\ToyDBServer\obj\Debug\netcoreapp3.0\ToyDBServer.csprojAssemblyReference.cache
+C:\Users\Akeem\Source\Repos\comp6720\ToyDBServer\ToyDBServer\obj\Debug\netcoreapp3.0\ToyDBServer.AssemblyInfoInputs.cache
+C:\Users\Akeem\Source\Repos\comp6720\ToyDBServer\ToyDBServer\obj\Debug\netcoreapp3.0\ToyDBServer.AssemblyInfo.cs
+C:\Users\Akeem\Source\Repos\comp6720\ToyDBServer\ToyDBServer\obj\Debug\netcoreapp3.0\ToyDBServer.dll
+C:\Users\Akeem\Source\Repos\comp6720\ToyDBServer\ToyDBServer\obj\Debug\netcoreapp3.0\ToyDBServer.pdb
+C:\Users\Akeem\Source\Repos\comp6720\ToyDBServer\ToyDBServer\bin\Debug\netcoreapp3.0\ToyDBServer.exe
+C:\Users\Akeem\Source\Repos\comp6720\ToyDBServer\ToyDBServer\bin\Debug\netcoreapp3.0\ToyDBServer.deps.json
+C:\Users\Akeem\Source\Repos\comp6720\ToyDBServer\ToyDBServer\bin\Debug\netcoreapp3.0\ToyDBServer.runtimeconfig.json
+C:\Users\Akeem\Source\Repos\comp6720\ToyDBServer\ToyDBServer\bin\Debug\netcoreapp3.0\ToyDBServer.runtimeconfig.dev.json
+C:\Users\Akeem\Source\Repos\comp6720\ToyDBServer\ToyDBServer\bin\Debug\netcoreapp3.0\ToyDBServer.dll
+C:\Users\Akeem\Source\Repos\comp6720\ToyDBServer\ToyDBServer\bin\Debug\netcoreapp3.0\ToyDBServer.pdb

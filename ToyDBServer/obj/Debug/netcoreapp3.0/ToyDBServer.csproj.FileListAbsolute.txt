@@ -20,3 +20,8 @@ C:\Users\Akeem\Source\Repos\comp6720\ToyDBServer\ToyDBServer\bin\Debug\netcoreap
 C:\Users\Akeem\Source\Repos\comp6720\ToyDBServer\ToyDBServer\bin\Debug\netcoreapp3.0\ToyDBServer.runtimeconfig.dev.json
 C:\Users\Akeem\Source\Repos\comp6720\ToyDBServer\ToyDBServer\bin\Debug\netcoreapp3.0\ToyDBServer.dll
 C:\Users\Akeem\Source\Repos\comp6720\ToyDBServer\ToyDBServer\bin\Debug\netcoreapp3.0\ToyDBServer.pdb
+C:\Users\physics_labtech\Source\Repos\ToyDBServer\ToyDBServer\obj\Debug\netcoreapp3.0\ToyDBServer.csprojAssemblyReference.cache
+C:\Users\physics_labtech\Source\Repos\ToyDBServer\ToyDBServer\obj\Debug\netcoreapp3.0\ToyDBServer.AssemblyInfoInputs.cache
+C:\Users\physics_labtech\Source\Repos\ToyDBServer\ToyDBServer\obj\Debug\netcoreapp3.0\ToyDBServer.AssemblyInfo.cs
+C:\Users\physics_labtech\Source\Repos\ToyDBServer\ToyDBServer\obj\Debug\netcoreapp3.0\ToyDBServer.dll
+C:\Users\physics_labtech\Source\Repos\ToyDBServer\ToyDBServer\obj\Debug\netcoreapp3.0\ToyDBServer.pdb

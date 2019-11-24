@@ -97,6 +97,14 @@ namespace ToyDBServer
             } else { return null;
             }
             }
+
+        public Boolean writeIndexFile(String Filename, String Hash, String Value) {
+
+            
+
+            return false;
+
+        }
            
             
         }
